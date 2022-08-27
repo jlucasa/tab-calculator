@@ -11,6 +11,25 @@ import { api } from './api';
  * }} Todo
  */
 
+/**
+ * @typedef {{
+ * 	uid: string;
+ * 	purchased_on: Date;
+ * 	name: string;
+ * 	cost: string;
+ * 	people_to_pay: Person[];
+ * }} Item
+ */
+
+/**
+ * @typedef {{
+ * 	uid: string;
+ * 	name: string;
+ * 	total_due: number;
+ * 	items: Item[];
+ * }} Person
+ */
+
 /** @type {import('./$types').PageServerLoad} */
 export const load = async ({ locals }) => {
 	// locals.userid comes from src/hooks.js
